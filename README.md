@@ -3,11 +3,13 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+A: 
+Naked twins are pairs of boxes within one unit (row, column or a 3x3 square or a diagonal) that have 2 possible values. Because this exactly means the two of them will each take one of the possible values in the final solved sudoku, so even though we don't know which box should have which value in this pair, we can start eliminating the two values from all the other squares in the same unit.
+To reduce the search space, we only look at each unit in the unitlist where the Sudoku requirement applies. Within each unit, we further limit search (comparison) only to boxes with value length of 2. If we were to do naked triples, we would only work on boxes with value string of length of.
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: We added an additional constraint, i.e. define diagonal units and add them to the unitlist - the unit in this list will be used as the scope for searches and comparisons in our 3 strategies (elimination, only choice and naked twins).   
 
 ### Install
 
